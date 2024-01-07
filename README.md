@@ -23,5 +23,5 @@ Here's a brief overview of the added features:
 To introduce this code on GitHub, you can mention that it is an extension of the previously provided Bank Management System. 
 Highlight the new features, such as the enhanced customer data structure, account balance management, and the addition of customer and admin functionalities. 
 Consider providing examples of how to use the system in the README or code comments for users to understand its functionality better. Additionally, 
-you may want to mention any plans for future improvements or features.
+you may want to mention any plans for future improvements or features.<br><br>
 <img src="./src/output.png">
