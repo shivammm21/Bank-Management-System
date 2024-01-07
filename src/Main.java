@@ -13,8 +13,7 @@ public class Main {
             System.out.println("1.Are u New Customer ? ");
             System.out.println("2.Our Customer ? ");
             System.out.println("3. Admin Login ? ");
-            System.out.println("4. ? ");
-            System.out.println("5. ? ");
+            System.out.println("4. Exit");
             choice = sc.nextInt();
 
             if(choice==1){
@@ -24,8 +23,14 @@ public class Main {
 
                 System.out.print("Your City u Live : ");
                 String Address = sc.next();
-                System.out.print("Your Mobile Number : ");
-                String Mno = sc.next();
+                String Mno;
+                do {
+                    System.out.print("Your Mobile Number : ");
+                    Mno = sc.next();
+                    if(Mno.length()!=10){
+                        System.out.println("Please re-enter the 10dit Mobile No.");
+                    }
+                }while (10!=Mno.length());
                 System.out.print("Create userId : ");
                 String userId = sc.next();
                 System.out.print("Create Password : ");
@@ -48,14 +53,25 @@ public class Main {
 
             }
             else if(choice==3){
-                //admin
+                System.out.print("Enter username : ");
+                String user = sc.next();
+                System.out.print("Enter Password : ");
+                String pass = sc.next();
+                if(user.equals("admin")&&pass.equals("admin")){
+                    obj.adminLogin();
+                }
+                else {
+                    System.out.println("Wrong Password");
+                }
+
 
 
             }
 
 
 
-        }while (choice!=10);
+        }while (choice!=4);
+        System.out.println("Thank You");
 
     }
 }

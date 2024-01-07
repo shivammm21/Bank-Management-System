@@ -184,6 +184,26 @@ public class BankAcoutns {
 
 
     }
+    public void adminLogin(){
+        Scanner sc = new Scanner(System.in);
+        int ch;
+        do {
+            System.out.println("1.View all customers");
+            System.out.println("2.View customers Data");
+            System.out.println("3.?");
+            System.out.println("4.Exit");
+            ch = sc.nextInt();
+
+            if(ch==1){
+                System.out.println("   Customer Acnt Num      UserIds");
+                for(int i=0;i<custData.size();i++){
+                    System.out.println(i+1+ custData.get(i).AcountNumber+" "+custData.get(i).userId);
+                }
+            }
+        }while (ch!=4);
+
+
+    }
 
 
 
